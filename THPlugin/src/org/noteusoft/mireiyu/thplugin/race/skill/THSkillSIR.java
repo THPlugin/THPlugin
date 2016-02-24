@@ -1,9 +1,6 @@
-ï»¿package org.noteusoft.mireiyu.thplugin.race.skill;
+package org.noteusoft.mireiyu.thplugin.race.skill;
 
-<<<<<<< HEAD
 import java.util.List;
-
-import net.minecraft.server.v1_8_R3.MathHelper;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Effect;
@@ -24,15 +21,11 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
-=======
-import org.bukkit.event.Listener;
->>>>>>> origin/master
 
 public class THSkillSIR implements Listener  {
-	//ç§»å‹•ã‚¹ã‚­ãƒ«ç³»
+	//ˆÚ“®ƒXƒLƒ‹Œn
 
-<<<<<<< HEAD
-	//å¬å–šã‚¹ã‚­ãƒ«ç³»
+	//¢Š«ƒXƒLƒ‹Œn
 	public static void seirei_summon(Player pl, final Plugin plugin,final String pluginpre, final PlayerInteractEvent event)
 	{
 	    double type = Math.random();
@@ -49,7 +42,7 @@ public class THSkillSIR implements Listener  {
 	        n++;
 	      }
 	      pl.getWorld().playSound(pl.getLocation(), Sound.IRONGOLEM_HIT, 2.0F, 1.0F);
-	      pl.sendMessage(pluginpre + ChatColor.AQUA + "é›ªã®éœŠã‚’å¬å–šã—ãŸï¼");
+	      pl.sendMessage(pluginpre + ChatColor.AQUA + "á‚Ì—ì‚ð¢Š«‚µ‚½I");
 	    }
 	    else
 	    {
@@ -64,7 +57,7 @@ public class THSkillSIR implements Listener  {
 	        n++;
 	      }
 	      pl.getWorld().playSound(pl.getLocation(), Sound.IRONGOLEM_HIT, 2.0F, -1.0F);
-	      pl.sendMessage(pluginpre + ChatColor.GOLD + "å²©ã®éœŠã‚’å¬å–šã—ãŸ");
+	      pl.sendMessage(pluginpre + ChatColor.GOLD + "Šâ‚Ì—ì‚ð¢Š«‚µ‚½");
 	    }
         MetadataValue usingmagic = new FixedMetadataValue(plugin, Boolean.valueOf(true));
         pl.setMetadata("using-magic", usingmagic);
@@ -75,11 +68,11 @@ public class THSkillSIR implements Listener  {
             Player pl = event.getPlayer();
             MetadataValue usingmagic = new FixedMetadataValue(plugin, Boolean.valueOf(false));
             pl.setMetadata("using-magic", usingmagic);
-            pl.sendMessage(pluginpre + ChatColor.BLUE + "è© å”±ã®ã‚¯ãƒ¼ãƒ«ãƒ€ã‚¦ãƒ³ãŒçµ‚ã‚ã‚Šã¾ã—ãŸ");
+            pl.sendMessage(pluginpre + ChatColor.BLUE + "‰r¥‚ÌƒN[ƒ‹ƒ_ƒEƒ“‚ªI‚í‚è‚Ü‚µ‚½");
           }
         }, 400L);
 	}
-	//æ”»æ’ƒã‚¹ã‚­ãƒ«ç³»
+	//UŒ‚ƒXƒLƒ‹Œn
 	public static void hannrei_hannrei_ball(Player pl, final Plugin plugin, final PlayerInteractEvent event)
 	{
 	    pl.getWorld().playSound(pl.getLocation(), Sound.DIG_SAND, 2.0F, 2.0F);
@@ -87,9 +80,9 @@ public class THSkillSIR implements Listener  {
 	    Location location = pl.getEyeLocation();
 	    float pitch = location.getPitch() / 180.0F * 3.1415927F;
 	    float yaw = location.getYaw() / 180.0F * 3.1415927F;
-	    double motX = -MathHelper.sin(yaw) * MathHelper.cos(pitch);
-	    double motZ = MathHelper.cos(yaw) * MathHelper.cos(pitch);
-	    double motY = -MathHelper.sin(pitch);
+	    double motX = -Math.sin(yaw) * Math.cos(pitch);
+	    double motZ = Math.cos(yaw) * Math.cos(pitch);
+	    double motY = -Math.sin(pitch);
 	    Vector velocity = new Vector(motX, motY, motZ).multiply(2.0D);
 	    @SuppressWarnings("deprecation")
 		Snowball snowball = pl.throwSnowball();
@@ -108,7 +101,7 @@ public class THSkillSIR implements Listener  {
 	        if ((enemy instanceof Player))
 	        {
 	          ((Player)enemy).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 5));
-	          ((Player)enemy).sendMessage(pluginpre + ChatColor.DARK_BLUE + "é¬±ã ãƒ»ãƒ»");
+	          ((Player)enemy).sendMessage(pluginpre + ChatColor.DARK_BLUE + "ŸT‚¾EE");
 	        }
 	      }
 	    }
@@ -119,7 +112,7 @@ public class THSkillSIR implements Listener  {
 	        if ((enemy instanceof Player))
 	        {
 	          ((Player)enemy).addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 400, 2));
-	          ((Player)enemy).sendMessage(pluginpre + ChatColor.DARK_RED + "èºã â˜†");
+	          ((Player)enemy).sendMessage(pluginpre + ChatColor.DARK_RED + "çN‚¾™");
 	        }
 	      }
 	    }
@@ -129,7 +122,7 @@ public class THSkillSIR implements Listener  {
 	      for (Entity enemy : enemys) {
 	        if ((enemy instanceof Player))
 	        {
-	          ((Player)enemy).sendMessage(pluginpre + ChatColor.GREEN + "é¨’éŸ³ã ï¼ï¼");
+	          ((Player)enemy).sendMessage(pluginpre + ChatColor.GREEN + "‘›‰¹‚¾II");
 	          if (((Player)enemy).getHealth() - 15.0D >= 0.0D) {
 	            ((Player)enemy).setHealth(((Player)enemy).getHealth() - 15.0D);
 	          } else {
@@ -149,9 +142,9 @@ public class THSkillSIR implements Listener  {
 	    {
 	      float pitch = location.getPitch() / 180.0F * 3.1415927F;
 	      float yaw = location.getYaw() / 180.0F * 3.1415927F + n * 45;
-	      double motX = -MathHelper.sin(yaw) * MathHelper.cos(pitch);
-	      double motZ = MathHelper.cos(yaw) * MathHelper.cos(pitch);
-	      double motY = -MathHelper.sin(pitch);
+	      double motX = -Math.sin(yaw) * Math.cos(pitch);
+	      double motZ = Math.cos(yaw) * Math.cos(pitch);
+	      double motY = -Math.sin(pitch);
 	      Vector velocity = new Vector(motX, motY, motZ).multiply(2.0D);
 	      @SuppressWarnings("deprecation")
 		  Snowball snowball = pl.throwSnowball();
@@ -169,11 +162,11 @@ public class THSkillSIR implements Listener  {
 	    if (rand > 0.6D)
 	    {
 	      pl.setHealth(50.0D);
-	      pl.sendMessage(pluginpre + ChatColor.DARK_RED + "æ¶ˆãˆãŸããªã„ãƒ»ãƒ»ãƒ»ã£");
+	      pl.sendMessage(pluginpre + ChatColor.DARK_RED + "Á‚¦‚½‚­‚È‚¢EEE‚Á");
 	      if ((event.getDamager() instanceof Player))
 	      {
 	        Player dpl = (Player)event.getDamager();
-	        dpl.sendMessage(pluginpre + ChatColor.DARK_RED + "æ¶ˆãˆãŸããªã„ãƒ»ãƒ»ãƒ»ã£");
+	        dpl.sendMessage(pluginpre + ChatColor.DARK_RED + "Á‚¦‚½‚­‚È‚¢EEE‚Á");
 	        dpl.addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 100, 4));
 	      }
 	      pl.getWorld().playSound(pl.getLocation(), Sound.GHAST_CHARGE, 2.0F, 2.0F);
@@ -237,8 +230,4 @@ public class THSkillSIR implements Listener  {
 		    }
 	    }
 	}
-=======
-	//æ”»æ’ƒã‚¹ã‚­ãƒ«ç³»
-
->>>>>>> origin/master
 }

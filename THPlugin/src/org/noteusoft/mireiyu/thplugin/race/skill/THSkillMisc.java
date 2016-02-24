@@ -31,11 +31,7 @@ public class THSkillMisc implements Listener {
 		        	Entity damagerentity = ((EntityDamageByEntityEvent) e).getDamager();
 		            Snowball snowball = (Snowball)damagerentity;
 		            if (snowball.hasMetadata("seirei-lightball")) {
-<<<<<<< HEAD
-		            	//Á≤æÈúäÔøΩ?ÔøΩÂºæ
-=======
-		            	//Á≤æÈúäÂ?âÂºæ
->>>>>>> origin/master
+		            	//ê∏óÏíe
 		            	e.setDamage(6.0D);
 		            }else if (snowball.hasMetadata("hannrei-curseball")) {
 		                p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 150, 3));
@@ -58,11 +54,7 @@ public class THSkillMisc implements Listener {
 		                      plugin.getConfig().set("user." + UUID.fromString(((MetadataValue)((EntityDamageByEntityEvent) e).getDamager().getMetadata("hannrei-curseball").get(0)).asString()) + ".spilit", Double.valueOf(100.0D));
 		                    }
 		                  }
-<<<<<<< HEAD
-		                  p.sendMessage(pluginpre + ChatColor.DARK_PURPLE + "ÈúäÂäõ„ÇíÂê∏„ÅÑÂèñ„Çâ„Çå„ÅüÔºÅÔºÅÔºÅ");
-=======
-		                  p.sendMessage(pluginpre + ChatColor.DARK_PURPLE + "ÈúäÂäõ„ÇíÂê∏„Å?Âèñ„Çâ„Çå„Åü?º?º?");
->>>>>>> origin/master
+		                  p.sendMessage(pluginpre + ChatColor.DARK_PURPLE + "óÏóÕÇãzÇ¢éÊÇÁÇÍÇΩÅIÅIÅI");
 		                }
 		            }
 		        }
